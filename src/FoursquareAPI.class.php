@@ -115,8 +115,7 @@ class FoursquareApi {
 		$url = $this->BaseUrl . "multi";
 		$params = array();
 		$params['oauth_token'] = $this->AuthToken;
-		if (!isset($params['v']))
-			$params['v'] = $this->Version;
+		$params['v'] = $this->Version;
 		if (is_array($requests)){
 			$request_queries = array();
 			foreach($requests as $request) {
